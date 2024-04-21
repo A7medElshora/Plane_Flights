@@ -22,28 +22,28 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Bottom Navigation Example'),
-      ),
+
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.blue, // Selected item color
+        unselectedItemColor: Colors.black87, // Unselected item color
         currentIndex: _selectedIndex,
         onTap: (index) => setState(() => _selectedIndex = index),
         items: [
           BottomNavigationBarItem(
-            icon: Image.asset('assets/home_icon.png', width: 24, height: 24),
+            icon: Image.asset('assets/icons/routing.png', width: 24, height: 24),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset('assets/flights_icon.png', width: 24, height: 24),
+            icon: Image.asset('assets/icons/airplane.png', width: 24, height: 24),
             label: 'Flights',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset('assets/fav_icon.png', width: 24, height: 24),
+            icon: Image.asset('assets/icons/fave.png', width: 24, height: 24),
             label: 'Favorites',
           ),
           BottomNavigationBarItem(
-            icon: Image.asset('assets/profile_icon.png', width: 24, height: 24),
+            icon: Image.asset('assets/icons/profile.png', width: 24, height: 24),
             label: 'Profile',
           ),
         ],
@@ -51,4 +51,3 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     );
   }
 }
-
